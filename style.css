@@ -1,0 +1,812 @@
+  @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&display=swap');
+  :root{
+      --corPrimaria: #304F8C;
+      --corAzulEscuro: #111826;
+      --corBranco:#fff;
+      --corCinzaEscuro: #4C5D73;
+      --corPreto: #111826;
+  }
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Rubik', sans-serif;
+ }
+
+.body{
+    width: 100%;
+    height: 100%;
+    background-color: #E5E5E5;
+}
+
+/* --------------------------- HOME -----------------------------------*/
+.home{
+    width: 1280px;
+    height: 3817px;
+    background-color: var(--corBranco);
+    margin: 0 auto;
+}
+
+/* --------------------------- HEADER --------------------------------*/
+
+header{
+    width: 1280px;
+    height: 108px;
+    background-color: var(--corBranco);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.logotipo{
+    display: flex;
+}
+
+.logo{
+    width: 32px;
+    height: 32px;
+}
+
+.nomeEmpresa{
+    font-family: 'Rubik', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--corPreto);
+    margin-left: 10px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav li a{
+    display: block;
+    position: relative;
+    padding: 20px 30px;
+    color: var(--corCinzaEscuro);
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: linear-gradient(to right, var(--corPrimaria) , var(--corPreto));
+    transition: all 300ms ease-in-out;
+}
+
+nav a:hover {
+    color: var(--corCinzaEscuro);
+    border-radius: 5px;
+    border: solid 1px #ebebeb;
+    transition: all 300ms ease-in-out;
+}
+
+nav a:hover::after{
+    width: 50%;
+    left: 25%;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    color: var(--corPrimaria);
+}
+
+.cadastre{
+    margin-right: 20px;
+    font-size: 16;
+    font-weight: 600;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: var(--corPrimaria);
+}
+
+.cadastre:hover{
+    color: var(--corCinzaEscuro);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.botaoLogin{
+    width: 150px;
+    height: 44px;
+    border: solid 1px var(--corPrimaria);
+    background-color: var(--corBranco);
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--corPrimaria);
+    font-weight: 600;
+}
+
+.botaoLogin:hover{
+    background-color: var(--corPrimaria);
+    color: var(--corBranco);
+    cursor: pointer;
+}
+
+.botaoLogin:active{
+    background-color: var(--corCinzaEscuro);
+}
+
+/* -----------------------------HERO------------------------------*/
+
+.hero{
+    width: 1136px;
+    height: 521px;
+    background-color: var(--corBranco);
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.heroConteudo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+    }
+
+.heroTitulo{
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--corAzulEscuro);
+    margin-bottom: 35px;
+}
+
+.heroSubTitulo{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--corCinzaEscuro);
+    margin-bottom: 35px;
+}
+
+.heroButton{
+    width: 250px;
+    height: 60px;
+    background-color: var(--corPrimaria);
+    border-radius: 10px;
+    border: none;
+    color: var(--corBranco);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.heroFooter{
+    width: 1136px;
+    height: 124px;
+    background-color: var(--corBranco);
+    border-radius: 10px;
+}
+
+.heroImg{
+    width: 59px;
+    height: 59px;
+    background-color:rgba(48, 79, 140, 0.1);
+    border-radius: 50%;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroIconTitulo{
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--corAzulEscuro);
+}
+
+.heroIconSubtitulo{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--corCinzaEscuro);
+}
+.heroFooterConteudo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--corBranco);
+    box-shadow: 5px 10px 50px rgba(48, 79, 140, 0.05);
+    width: 1136px;
+    height: 124px;
+
+}
+
+.heroIconConteudo{
+    display: block;
+}
+
+.heroLista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+/* ---------------------------- SERVIÇOS --------------------------- */
+
+.servicos{
+    width: 1136px;
+    height: 424px;
+    background-color: var(--corBranco);
+    margin: 0 auto;
+}
+
+.servicosSubTituloFont{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--corCinzaEscuro);
+    margin-bottom: 20px;
+}
+
+.servicosTituloFont{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--corPreto);
+    margin-bottom: 60px;
+}
+
+.servicosLista{
+    width: 268px;
+    height: 208px;
+    background-color: var(--corBranco);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+    box-shadow: 5px 10px 50px rgba(48, 79, 140, 0.05);
+
+}
+
+.servicosFooter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.servicosCard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 10px 50px rgba(48, 79, 140, 0.05);
+    list-style: none;
+   
+}
+
+.servicosCardIcon{
+    width: 67px;
+    height: 67px;
+    border-radius: 50px;
+    background-color: rgba(48, 79, 140, 0.1); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.servicosCardTitle{
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--corAzulEscuro);
+    margin-bottom: 10px;
+
+}
+
+.servicosCardsubTitle{
+    font-size: 14px;
+    color: var(--corCinzaEscuro);
+
+}
+
+/* ----------------------------- SOBRE NÓS ------------------------------*/
+
+.sobreNos{
+    width: 1136px;
+    height: 777px;
+    background-color: var(--corBranco);
+    margin: 0 auto;
+}
+
+.sobreNosConteudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sobreNosSubTitulo{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--corCinzaEscuro);
+    margin-bottom: 20px;
+}
+
+.sobreNosTituloFont{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--corPreto);
+    margin-bottom: 60px;
+}
+
+.sobreNosImagem{
+    margin-top: -100px;
+    margin-left: -60px;
+    z-index: 10;
+    position: relative;
+}
+
+.sobreNosConteudoTexto{
+    color: var(--corCinzaEscuro);
+    font-size: 16px;
+    z-index: 11;
+    margin-left: -350px;
+    }
+
+.sorriso{
+    margin-left: 20px;
+}
+
+.sobreNosBotao{
+    width: 214px;
+    height: 48px;
+    display: block;
+    border-radius: 8px;
+    border: solid 1px var(--corPrimaria);
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--corPrimaria);
+    margin-left: -350px;
+    box-shadow: 5px 10px 54px rgba(48, 79, 140, 0.05);
+    
+}
+
+/* ----------------------------- ATUAÇÃO ------------------------------*/
+.atuacao{
+    width: 1136px;
+    height: 424px;
+    background-color: var(--corBranco);
+    margin: 0 auto;
+}
+
+.atuacaoSubTitulo{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--corCinzaEscuro);
+    margin-bottom: 20px;
+}
+
+.atuacaoTituloFont{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--corPreto);
+    margin-bottom: 60px;
+}
+
+.atuacaoLista{
+    width: 268px;
+    height: 208px;
+    border-radius: 10px;
+    background-color: var(--corBranco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 10px 50px rgba(48, 79, 140, 0.05);
+    
+}
+.atuacaoCardIcon{
+    width: 105px;
+    height: 105px;
+    border-radius: 50px;
+    background-color: rgba(48, 79, 140, 0.1);
+    color: var(--corCinzaEscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.atuacaoCardTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--corAzulEscuro);
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin: 20px;
+}
+
+.atuacaoCard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ----------------------------- Planos ------------------------------*/
+
+.planos{
+    width: 1136px;
+    height: 454px;
+    background-color: var(--corBranco);
+    margin: 0 auto;
+}
+
+.planossubtitulo{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--corCinzaEscuro);
+    margin-bottom: 20px;
+}
+
+.planostitulofont{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--corPreto);
+    margin-bottom: 60px;
+}
+
+.planoslista{
+display: flex;
+justify-content: space-between;
+list-style: none;
+}
+
+.iniciante{
+    width: 268px;
+    height: 288px;
+    background-color: var(--corBranco);
+    box-shadow: 5px 10px 50px rgba(48, 79, 140, 0.05);
+    border-radius: 8px;
+    color:rgba(17, 24, 38, 1);
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+   
+}
+
+.essencial{
+    background-color: rgba(48, 79, 140, 1);
+    color: #FFFFFF;
+}
+
+.essencial span{
+    color: var(--corBranco);
+}
+
+.essencial .planosCardtitulo{
+    color: var(--corBranco);
+}
+
+.essencial .planosCardSubtitulo{
+    color: var(--corBranco);
+}
+
+.essencial .planosCardTexto{
+    color: var(--corBranco);
+}
+
+.popularbutton{
+    width: 137px;
+    height: 37px;
+    border-radius: 100px;
+    color: var(--corAzulEscuro);
+    border-color: var(--corAzulEscuro);
+    background-color:rgba(148, 242, 233, 1);
+    color: rgba(48, 79, 140, 1);
+    position: absolute;
+    top: -20px;
+    left: 65px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.planosCardtitulo1{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.planosCardSubtitulo1{
+    font-size: 32px;
+    font-weight: bolder;
+    font-family: 'Rubik', sans-serif;
+}
+
+.planosCardTexto1{
+    margin-bottom: 16px;
+    margin-top: 30px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.planosCardTexto1{
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.planosCardtitulo{
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--corAzulEscuro);
+}
+
+.planosCardSubtitulo{
+    margin-bottom: 34px;
+    font-size: 32px;
+    color: var(--corAzulEscuro);
+    font-weight: bolder;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+.planosCardTexto{
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: var(--corCinzaEscuro);
+
+}
+
+.planosValor{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(17, 24, 38, 0.6);
+    vertical-align: super;
+}
+
+
+.planosbutton{
+    width: 220px;
+    height: 48px;
+    color: var(--corAzulEscuro);
+    border-color: var(--corAzulEscuro);
+    border-radius: 8px;
+    border: 1px solid var(--corPrimaria);
+    color:rgba(48, 79, 140, 1);
+    position: absolute;
+    top: 220px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.custom-section {
+    width: 770px;
+    height: 425px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 80px; 
+    position: relative;
+    z-index: 10; 
+}
+
+.custom-box {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    border-radius: 13px;
+    box-sizing: border-box;
+    background-color: #EAEDF3;
+}
+
+.aspas{
+    width: 67px;
+    height: 67px;
+    padding-left: 80%;
+    position: absolute;
+    top:5px;
+
+}
+
+.boxtexto{
+    font-size: 16px;
+    font-weight: 700;
+    color:#4C5D73;
+    font-family: 'Rubik';
+    line-height: 35px;
+    padding: 0 100px ;
+    text-align: justify;
+}
+
+
+.circulo{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.banner{
+    list-style: none; display: flex;
+    flex-direction: row;
+    list-style: none;
+    position: absolute;
+    top: 380px;
+    left: 360px;
+    right: -5px;
+    
+}
+.bannerLista{
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    background-color: #2B4A86;
+    list-style: none;
+    z-index: 9;
+ position: relative;
+
+
+}
+
+.bannerLista2{
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    background-color: #EAEDF3;
+    list-style: none;
+    z-index: 9;
+    position: relative;
+    margin-left: 20px;
+    border: 1px solid #A0B3D9;
+
+}
+    
+    /*__________________________FOOTER__________*/
+
+    /* Estilos para o footer */
+.footer {
+   
+    background-color: #111826;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap;
+    justify-content: space-between; */
+    width: 1280px; /* Largura desejada */
+    height: 351px; /* Altura desejada */
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    top: -300px;
+}
+
+.colunabox{
+   
+    display: inline-flex
+}
+
+
+
+/* Estilos para cada coluna */
+
+.colunabox{
+    padding: 40px;
+}
+
+.column {
+    flex: 1;
+    width: calc(20% - 20px); /* Calcula a largura das colunas */
+    margin-right: 20px;
+    margin-top: 8px;
+    line-height: 30px;
+}
+
+.column:last-child {
+    margin-right: 0; /* Remove a margem direita da última coluna */
+}
+
+.column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column li {
+    margin-bottom: 5px;
+}
+
+
+.email-box-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.email-box {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.email-box-arrow {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-75%);
+}
+
+
+/* Estilos para o campo de e-mail e botão */
+.column input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.column button {
+    background-color: #E5E5E5;
+    border: none;
+    color: #304F8C;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.column button:hover {
+    background-color: #304F8C;
+    color: #fff;
+}
+
+
+/* Estilos para o hr */
+.footer-divider {
+    border: none; 
+    border-top: 1px solid #fff; 
+    width: 100%; 
+    margin: 0;
+    align-items: center; 
+
+}
+
+.insta{
+    margin-left: 10px;
+}
+/* Estilos para o parágrafo "Feito por" */
+.footer-made-by {
+    color: #fff; 
+    text-align: center; 
+    margin-top: 10px;
+    font-size: 14px; 
+    font-family: "Rubik";
+    font-weight: 300;
+}
+
+.linhabox{
+    margin-top: 10px;
+    display: block;
+
+
+}
